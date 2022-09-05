@@ -7,12 +7,12 @@
     <h1>this is home page </h1>
     {% if user.is_authenticated %}
         <p>welcome {{ user.username }} <span>|</span>
-        <a href="{% url 'logout' %}"><button class=".btn-success" type="submit">LOGIN</button></a></p>
+        <a href="{% url 'logout' %}"><button class=".btn-success" type="submit">log out</button></a></p>
 
-    {% else %}
-        <a href="{% url 'login' %}"> <button class=".btn-success" type="submit">LOGIN</button> </a>
-        <span>|</span>
-        <a href="{% url 'sing_up' %}"> <button class=".btn-success" type="submit">SINGUP</button> </a>
+        {% else %}
+            <a href="{% url 'login' %}"> <button class=".btn-success" type="submit">LOGIN</button> </a>
+            <span>|</span>
+            <a href="{% url 'sing_up' %}"> <button class=".btn-success" type="submit">SINGUP</button> </a>
 
     {% endif %}
 

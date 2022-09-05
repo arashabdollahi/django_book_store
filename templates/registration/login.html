@@ -6,9 +6,15 @@
 {% block content %}
     <h1>Login</h1>
     <form action="" method="post">
-    {% csrf_token %}
-    {{ form|crispy}}
-    <button class=".btn-success" type="submit">Login</button>
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button class=".btn-success" type="submit">Login</button>
     </form>
+    <a href="{% url "password_reset" %}">
+        <button class=".btn-success" type="submit">Forget Password</button>
+    </a>
+    <a href="{% url "sing_up" %}">
+        <button class=".btn-success" type="submit">Sing UP</button>
+    </a>
 {% endblock %}
 
